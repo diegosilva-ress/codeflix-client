@@ -5,10 +5,6 @@ export type InputFieldProps = {
   label: string;
   type: string;
   placeholder: string;
-  // name: string;
-  // value: string;
-  // onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  // error?: string;
 };
 
 export const InputField: React.FC<InputFieldProps> = ({

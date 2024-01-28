@@ -1,14 +1,12 @@
-import { Inter } from 'next/font/google';
-import Header from '@/app/components/Header';
-import { MovieRow } from '@/app/components/MovieRow';
-import { Banner } from '@/app/components/Banner';
+import { Banner } from './components/Banner';
+import Header from './components/Header';
+import { MovieRow } from './components/MovieRow';
 import { getFeaturedMovie, getMoviesByGenre } from './service/MovieService';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export default async function Home() {
-  const featuredMovie = await getFeaturedMovie('104');
+  const featuredMovie = await getFeaturedMovie('106');
   const genres = ['Drama', 'Action', 'Comedy', 'Animation'];
+
   const movies = await Promise.all(
     genres.map(async (genre) => {
       const movies = await getMoviesByGenre(genre, { _limit: 8 });

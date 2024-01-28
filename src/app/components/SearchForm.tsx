@@ -7,12 +7,11 @@ interface ISearchFormProps {
   onSearch: (event: FormEvent<HTMLFormElement>) => void;
   onSearchTermChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
-
 export function SearchForm({
-  searchTerm,
-  onSearch,
-  onSearchTermChange,
-}: ISearchFormProps): JSX.Element {
+                             searchTerm,
+                             onSearch,
+                             onSearchTermChange,
+                           }: ISearchFormProps): JSX.Element {
   return (
     <form onSubmit={onSearch} className='flex items-center space-x-2'>
       <button type='submit'>

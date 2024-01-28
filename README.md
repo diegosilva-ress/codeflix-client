@@ -15,7 +15,7 @@ pnpm dev
 Then, run json-server:
 
 ```bash
-npx json-server db.json -p 3001
+npx json-server db.json -p 3333
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
